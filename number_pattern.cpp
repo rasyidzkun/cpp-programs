@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     int n;
-    cout << "Enter an integer : ";
+    cout << "Enter number of rows : ";
     cin >> n;
 
     cout << endl;
@@ -39,6 +39,16 @@ int main(){
     for(int i = 1; i <= n; i++){
         for(int j = n; j >= i; j--){
             cout << setw(3) << j << " ";
+        }
+        cout << endl;
+    }
+
+    cout << endl;
+    cout << "Pattern 5\n";
+    int num = 1;
+    for(int i = 1 ; i <= n; i++){
+        for(int j = 1; j <= i ; j++){
+            cout << setw(3) << num ++ << " ";
         }
         cout << endl;
     }
