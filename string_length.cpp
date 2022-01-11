@@ -1,14 +1,20 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main(){
-    string sentence;
+    char str[100];
+    int count = 0;
 
-    cout << "Enter a string\t: " ;
-    getline(cin, sentence);
+    cout << "Enter a string : " ;
+    cin.getline(str, 100);
 
-    cout << "Length of the given string is\t: " << sentence.length();
+    for(int i = 0; str[i] != '\0'; i++){
+        if(!isspace(str[i])){
+            count++;
+        }
+    }
+    
+    cout << "Total number of characters found : " << count << endl;
 
     system("pause>0");
     return 0;
